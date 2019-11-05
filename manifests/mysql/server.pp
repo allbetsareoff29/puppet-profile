@@ -1,8 +1,13 @@
-# @summary A short summary of the purpose of this class
+# @summary Configures a base MySQL server
 #
-# A description of what this class does
+# Configures a base MySQL server
 #
 # @example
 #   include profile::mysql::server
 class profile::mysql::server {
+
+  class { '::mysql::server':
+    rootpassword            => 'passwordhash',
+    remove_default_accounts => true,
+  }
 }
