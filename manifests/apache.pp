@@ -1,8 +1,13 @@
-# @summary A short summary of the purpose of this class
+# @summary Base Apache profile with PHP
 #
-# A description of what this class does
+# Base Apache profile with PHP
 #
 # @example
 #   include profile::apache
 class profile::apache {
+  include ::apache
+
+  class { '::php':
+    pear => true,
+  }
 }

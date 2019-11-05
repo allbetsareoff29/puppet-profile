@@ -1,8 +1,14 @@
-# @summary A short summary of the purpose of this class
+# @summary This is our base profile for all nodes
 #
-# A description of what this class does
+# This is our base profile for all nodes
 #
 # @example
 #   include profile::base
 class profile::base {
+  include::ntp
+
+
+  class { '::motd':
+    content => "This host is managed by Puppet!\n",
+  }
 }
