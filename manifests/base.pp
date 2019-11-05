@@ -5,7 +5,7 @@
 # @example
 #   include profile::base
 class profile::base {
-  include::ntp
+  include ::ntp
 
 
   class { '::motd':
