@@ -7,7 +7,7 @@
 class profile::mysql::server {
 
   class { '::mysql::server':
-    rootpassword            => 'passwordhash',
+    root_password           => 'passwordhash',
     remove_default_accounts => true,
   }
 }
